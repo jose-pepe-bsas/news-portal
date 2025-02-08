@@ -1,0 +1,9 @@
+site_name: Sobre el portal de noticias
+nav:
+  - Inicio: hello.md
+  - End user documentation:
+      - Getting started: user_docs/index.md
+  - Technical documentation:
+      - Architecture and Design: index.md
+      - About N8N: investigacion_tech/n8n.md
+theme: readthedocs
