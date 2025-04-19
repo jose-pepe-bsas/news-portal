@@ -20,6 +20,11 @@ jobs:
           install-only: true
           version: "latest"  # semver x.y.z
 
+      - name: Install backend dependencies into runner
+        run: |
+          cd backend
+          npm install
+          npm ci
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -30,6 +35,7 @@ jobs:
 
       - name: Run Dagger pipeline from root
         run: |
+          npm install --save-dev @dagger.io/dagger
           dagger run -- node backend/cicd.mjs
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
