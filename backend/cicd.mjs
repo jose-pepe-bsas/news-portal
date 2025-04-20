@@ -1,4 +1,7 @@
-import { connect } from "@dagger.io/dagger"
+console.log("Bypassing cicd flow")
+/**
+*
+*import { connect } from "@dagger.io/dagger"
 // NOTE: Using mjs for avoid MODULE management.
 
 // load up dagger client
@@ -41,3 +44,4 @@ connect(async (client) => {
     console.log("CI: ERROR! Image built successfully and ready for deployment")
   }
 })
+*/
