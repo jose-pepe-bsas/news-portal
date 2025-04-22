@@ -1,0 +1,17 @@
+# this config allows docker to set up a volume for persistent data
+version: '3'
+services:
+  strapi:
+    build: .
+    ports:
+      - '1337:1337'
+    # That is the path of persistent data
+    volumes:
+      - strapi-data:/opt/app/.tmp
+    environment:
+      - DATABASE_CLIENT=sqlite
+      - DATABASE_FILENAME=.tmp/data.db
+      - NODE_ENV=development
+
+volumes:
+  strapi-data:
