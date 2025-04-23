@@ -41,7 +41,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./backend
           file: ./backend/Dockerfile  # Add this line if your Dockerfile has a custom name or location
           push: true
           tags: josepepedev/news_backend:latest
