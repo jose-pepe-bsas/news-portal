@@ -6,7 +6,7 @@ WORKDIR /opt/app
 # This is where persistent data is going to
 RUN mkdir -p .tmp
 
-COPY package.json package-lock.json ./
+COPY ../package.json ../package-lock.json ./
 RUN npm ci
 COPY . .
 RUN npm run build
