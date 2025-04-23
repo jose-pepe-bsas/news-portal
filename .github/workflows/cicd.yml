@@ -25,7 +25,7 @@ jobs:
       - name: Install backend dependencies into runner
         run: |
           cd backend
-          npm ci
+          npm install
 
       # Start and use docker for delivery
 
